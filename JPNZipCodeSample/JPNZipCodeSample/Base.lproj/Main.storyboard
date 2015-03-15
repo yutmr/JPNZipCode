@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JPNZipCodeSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="郵便番号を入力してね！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5c2-Mj-2nx">
+                                <rect key="frame" x="52" y="20" width="497" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddk-eK-NrP">
+                                <rect key="frame" x="182" y="75" width="237" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="2Nu-hh-1Ms"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvT-zC-Ymo">
+                                <rect key="frame" x="239" y="131" width="123" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FhY-44-bZW"/>
+                                    <constraint firstAttribute="width" constant="123" id="xBe-mt-PDe"/>
+                                </constraints>
+                                <state key="normal" title="住所を取得！">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchAddress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zAR-R4-aUE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ddk-eK-NrP" firstAttribute="top" secondItem="5c2-Mj-2nx" secondAttribute="bottom" constant="34" id="9iB-3F-mnx"/>
+                            <constraint firstItem="5c2-Mj-2nx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36" id="AVJ-Ce-ivR"/>
+                            <constraint firstItem="uvT-zC-Ymo" firstAttribute="top" secondItem="ddk-eK-NrP" secondAttribute="bottom" constant="26" id="M6d-g4-4fo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uvT-zC-Ymo" secondAttribute="bottom" constant="439" id="PdH-xw-zYq"/>
+                            <constraint firstItem="uvT-zC-Ymo" firstAttribute="centerX" secondItem="ddk-eK-NrP" secondAttribute="centerX" id="k0F-Oy-Trq"/>
+                            <constraint firstItem="5c2-Mj-2nx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mo5-KH-S2d"/>
+                            <constraint firstItem="5c2-Mj-2nx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nhL-kZ-3RC"/>
+                            <constraint firstItem="5c2-Mj-2nx" firstAttribute="centerX" secondItem="ddk-eK-NrP" secondAttribute="centerX" id="pq3-s8-SoM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="5c2-Mj-2nx" id="jOs-Kk-ysD"/>
+                        <outlet property="textField" destination="ddk-eK-NrP" id="t0b-ea-fTX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
