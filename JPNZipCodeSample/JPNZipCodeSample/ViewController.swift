@@ -22,20 +22,20 @@ class ViewController: UIViewController {
     }
 
     @IBAction func searchAddress(sender: AnyObject) {
-        var zipCode = self.textField?.text
+        var zipCode = textField?.text
         JPNZipCode.get(zipCode, completionHandler: { (response, error) -> Void in
             if response != nil {
                 var status: NSNumber = response!["code"]! as! NSNumber
                 
                 switch (status.compare(400)) {
                     case .OrderedSame, .OrderedDescending:
-                        break;
+                        break
                     case .OrderedAscending:
                         var address = response!["data"]!["fullAddress"]! as! String
                         dispatch_async(dispatch_get_main_queue(), {
-                            self.label!.text = address;
+                            self.label!.text = address
                         })
-                        break;
+                        break
                 }
             }
         })

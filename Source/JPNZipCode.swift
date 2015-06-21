@@ -1,6 +1,5 @@
 //
 //  JPNZipCode.swift
-//  JPNZipCodeSample
 //
 //  Created by YuTamura on 2015/03/15.
 //  Copyright (c) 2015年 YuTamura. All rights reserved.
@@ -26,7 +25,7 @@ public class JPNZipCode {
                 completionHandler(nil, jsonError)
             }
             
-            completionHandler(json, nil);
+            completionHandler(json, nil)
         })
         task.resume()
     }
