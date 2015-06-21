@@ -25,13 +25,13 @@ class ViewController: UIViewController {
         var zipCode = self.textField?.text
         JPNZipCode.get(zipCode, completionHandler: { (response, error) -> Void in
             if response != nil {
-                var status: NSNumber = response!["code"]! as NSNumber
+                var status: NSNumber = response!["code"]! as! NSNumber
                 
                 switch (status.compare(400)) {
                     case .OrderedSame, .OrderedDescending:
                         break;
                     case .OrderedAscending:
-                        var address = response!["data"]!["fullAddress"]! as String
+                        var address = response!["data"]!["fullAddress"]! as! String
                         dispatch_async(dispatch_get_main_queue(), {
                             self.label!.text = address;
                         })

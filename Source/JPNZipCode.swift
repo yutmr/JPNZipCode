@@ -21,7 +21,7 @@ public class JPNZipCode {
             }
 
             var jsonError: NSError?
-            var json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &jsonError) as NSDictionary
+            var json: NSDictionary? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &jsonError) as? NSDictionary
             if jsonError == nil {
                 completionHandler(nil, jsonError)
             }
